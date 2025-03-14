@@ -4,7 +4,7 @@ using System.IO;
 
 public class ReadWav
 {
-    public static AudioClip WavPath2AudioClip(string filePath)
+    public AudioClip WavPath2AudioClip(string filePath)
     {
         // Read data in bytes
         byte[] wavData = File.ReadAllBytes(filePath);
@@ -89,7 +89,7 @@ public class ReadWav
     }
 
     // Skip header
-    int FindDataChunk(byte[] wavData)
+    static int FindDataChunk(byte[] wavData)
     {
         for (int i = 12; i < wavData.Length - 8; i += 2)
         {
