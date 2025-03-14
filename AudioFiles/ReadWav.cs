@@ -4,7 +4,7 @@ using System.IO;
 
 public class ReadWav
 {
-    public AudioClip WavPath2AudioClip(string filePath)
+    public static AudioClip WavPath2AudioClip(string filePath)
     {
         // Read data in bytes
         byte[] wavData = File.ReadAllBytes(filePath);
